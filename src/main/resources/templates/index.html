@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>BakeSale Manager Application</title>
+</head>
+<body>
+	<div align="center">
+	    <h1>Make your order</h1>
+	    <br/>
+	    <table style="border:1px;padding:10px">
+	        <thead>
+	            <tr>
+	                <th>Product</th>
+	                <th>Choose</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr th:each="sale : ${listSale}">
+	                <td th:text="${sale.product}">Product</td>
+	                <td><input type="checkbox" th:value="${sale.prod}"></td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    <br/>
+	    <button type="submit">Buy</button>
+	</div>   
+</body>
+</html>

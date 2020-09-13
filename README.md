@@ -41,3 +41,10 @@ DB configuration:
   INSERT INTO BAKESALE(id, product, stock, price, prod) VALUES (4, 'Water', 30, 1.50, 'W');
 
 ---
+
+In the pom.xml, enter the proper ojdbc8.jar systemPath
+Eclipse > Project Properties > Project Facets > check Dynamic Web Module > Apply and Close
+Eclipse > Window > Show View > Other > Server > Servers > New > Tomcat Server > choose Tomcat v9.0 Server > Next > add BakeSaleManager resource > Finish
+(from the new Tomcat server > change Monitoring ports if other instances are running in the default port) Start the server
+Run BakeSaleManagerApplication as Java Application
+Open http://localhost:8080/
