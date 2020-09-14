@@ -13,12 +13,14 @@
 	        <thead>
 	            <tr>
 	                <th>Product</th>
+	                <th>Price</th>
 	                <th>Choose</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 	            <tr th:each="sale : ${listSale}">
 	                <td th:text="${sale.product}">Product</td>
+	                <td th:text="${sale.price}">Price</td>
 	                <td><input type="checkbox" th:value="${sale.prod}"></td>
 	            </tr>
 	        </tbody>
