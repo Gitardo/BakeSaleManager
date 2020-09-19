@@ -9,7 +9,7 @@
 	<div align="center">
 	    <h1>Make your order</h1>
 	    <br/>
-	    <table style="border:1px;padding:10px">
+	    <table id="tblItems" style="border:1px;padding:10px">
 	        <thead>
 	            <tr>
 	                <th>Product</th>
@@ -26,7 +26,32 @@
 	        </tbody>
 	    </table>
 	    <br/>
-	    <button type="submit">Buy</button>
+	    <button type="submit" id="btnBuy" value="Get">Buy</button>
+	    
+	    <!-- ======================================================================= -->
+	    
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		    $(function () {
+		        $("#btnBuy").click(function () {
+		            //Create an Array.
+		            var selected = new Array();
+		 
+		            //Reference the CheckBoxes and insert the checked CheckBox value in Array.
+		            $("#tblItems input[type=checkbox]:checked").each(function () {
+		                selected.push(this.value);
+		            });
+		 
+		            //Display the selected CheckBox values.
+		            if (selected.length > 0) {
+		                alert("Selected values: " + selected.join(","));
+		            }
+		        });
+		    });
+		</script>
+	    
+	    <!-- ======================================================================= -->
+	    
 	</div>   
 </body>
 </html>
