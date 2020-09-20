@@ -25,4 +25,13 @@ public class BakeSaleDAO {
 		return listSale;
 	}
 
+	public List<BakeSaleModel> checkedList() {
+		String sql = "SELECT * FROM BAKESALE WHERE PROD='B'";
+
+		List<BakeSaleModel> checkedSale = jdbcTemplate.query(sql, 
+				BeanPropertyRowMapper.newInstance(BakeSaleModel.class));
+		
+		return checkedSale;
+	}
+
 }

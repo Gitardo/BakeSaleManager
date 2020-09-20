@@ -26,7 +26,9 @@
 	        </tbody>
 	    </table>
 	    <br/>
-	    <button type="submit" id="btnBuy" value="Get">Buy</button>
+	    <!-- <form method="POST" th:action="@{/purchese}"> -->
+	    	<button type="submit" id="btnBuy" value="Post" onclick="window.location.href='/purchase'">Buy</button>
+	    <!-- </form> -->
 	    
 	    <!-- ======================================================================= -->
 	    
@@ -46,6 +48,9 @@
 		            if (selected.length > 0) {
 		                alert("Selected values: " + selected.join(","));
 		            }
+		            else {
+		            	alert("Select items to buy");
+		            } 
 		        });
 		    });
 		</script>

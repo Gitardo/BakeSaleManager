@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>BakeSale Manager Application</title>
+	</head>
+	<body>
+		<div align="center">
+		    <h1>Purchase order</h1>
+		    <br><br>
+		    <table style="border:1px;padding:10px">
+	            <tr th:each="sale : ${checkedSale}">
+	                <td th:text="${sale.product}">Product</td>
+	                <td th:text="${sale.price}">Price</td>
+	            </tr>
+	        </table>
+		    <br><br>
+		    <!-- <input type="text" th:value="${sale.prod}" readonly="readonly"/> -->
+	        <br><br>
+	        <!-- <form action="#" th:action="@{/buy_form}" th:object="${sale}" method="post">
+	        
+	        </form> -->      
+	        <a href="javascript:history.back()">Back to shop</a>
+		</div>
+	</body>
+</html>
