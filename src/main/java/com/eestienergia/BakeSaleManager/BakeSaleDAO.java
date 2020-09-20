@@ -12,6 +12,10 @@ public class BakeSaleDAO {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
+	public BakeSaleDAO(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
 	public List<BakeSaleModel> list() {
 		String sql = "SELECT * FROM BAKESALE";
 
